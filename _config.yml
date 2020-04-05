@@ -128,4 +128,4 @@ githubEmojis:
 deploy:
   type: 'git'
   repository: 'https://github.com/simbel6/simbel6.github.io.git'
-  branch: master
+  branch: gh-pages
