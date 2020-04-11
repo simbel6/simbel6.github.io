@@ -13,13 +13,13 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.simbel.cn
+url: https://simbel.cn
 root: /
 permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # abbrlink config
 abbrlink:
@@ -50,7 +50,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: fasle
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -58,7 +58,7 @@ highlight:
   hljs: false
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
+  theme: 'duotone-dark'
   line_number: false    # default false
   custom_css:
 
@@ -127,5 +127,5 @@ githubEmojis:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repository: 'https://github.com/simbel6/simbel6.github.io.git'
-  branch: gh-pages
+  repo: git@simbel.cn:/var/repo/hexo.git
+  branch: master
