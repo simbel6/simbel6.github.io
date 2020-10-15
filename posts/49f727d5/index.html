@@ -476,10 +476,7 @@
     <span class="token keyword">return</span> <span class="token function">bsearch1</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">,</span> low<span class="token punctuation">,</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h4 id="二分法查找变体"><a href="#二分法查找变体" class="headerlink" title="二分法查找变体"></a>二分法查找变体</h4><ol>
-<li>查找第一个值等于给定值的元素</li>
-</ol>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchFirst</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2 id="二分法查找变体"><a href="#二分法查找变体" class="headerlink" title="二分法查找变体"></a>二分法查找变体</h2><h3 id="查找第一个值等于给定值的元素"><a href="#查找第一个值等于给定值的元素" class="headerlink" title="查找第一个值等于给定值的元素"></a>查找第一个值等于给定值的元素</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchFirst</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
     high <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
     mid<span class="token punctuation">;</span>
@@ -501,10 +498,7 @@
 <span class="token punctuation">}</span></code></pre>
 <p>如果mid等于0，那这个元素已经是数组的第一个元素，那它肯定是我们要找的;</p>
 <p>如果mid不等于0，a[mid]的前一个元素a[mid-1]不等于value，那也说明a[mid]就是我们要找的第一个值等于给定值的元素。</p>
-<ol start="2">
-<li>查找最后一个值等于给定值的元素</li>
-</ol>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchLast</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h3 id="查找最后一个值等于给定值的元素"><a href="#查找最后一个值等于给定值的元素" class="headerlink" title="查找最后一个值等于给定值的元素"></a>查找最后一个值等于给定值的元素</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchLast</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
     high <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
     mid<span class="token punctuation">;</span>
@@ -524,10 +518,7 @@
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<ol start="3">
-<li>查找第一个大于等于给定值的元素</li>
-</ol>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchB</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h3 id="查找第一个大于等于给定值的元素"><a href="#查找第一个大于等于给定值的元素" class="headerlink" title="查找第一个大于等于给定值的元素"></a>查找第一个大于等于给定值的元素</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchB</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
     high <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
     mid<span class="token punctuation">;</span>
@@ -547,10 +538,7 @@
 <span class="token punctuation">}</span></code></pre>
 <p>如果a[mid]前面已经没有元素，或者前面一个元素小于要查找的值value，那a[mid]就是我们要找的<br>元素。</p>
 <p>如果a[mid-1]也大于等于要查找的值value，那说明要查找的元素在[low, mid-1]之间，所以，我们将high更新为mid-1。</p>
-<ol start="4">
-<li>查找最后一个小于等于给定值的元素</li>
-</ol>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchL</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h3 id="查找最后一个小于等于给定值的元素"><a href="#查找最后一个小于等于给定值的元素" class="headerlink" title="查找最后一个小于等于给定值的元素"></a>查找最后一个小于等于给定值的元素</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">searchL</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
     high <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
     mid<span class="token punctuation">;</span>
@@ -695,35 +683,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/49f727d5/">
+                <a href="/posts/a444b428/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="二分法查找">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="排序">
                         
-                        <span class="card-title">二分法查找</span>
+                        <span class="card-title">排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            二分法查找// 循环查找
-function bsearch(arr, value) {
-  let low = 0,
-    high = arr.length - 1;
-  let mid;
-  while (low &lt; high)
+                            冒泡排序function bubbleSort(list) {
+  for (let i = 0; i &lt; list.length; i++) {
+    let isSorted = true;
+    for (let j = 0
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-15
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-15
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -740,7 +725,6 @@ function bsearch(arr, value) {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -748,8 +732,8 @@ function bsearch(arr, value) {
                         <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">查找</span>
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
