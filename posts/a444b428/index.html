@@ -756,23 +756,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/146add1a/">
+                <a href="/posts/246c4cab/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="JavaScript 手写 call 方法.md">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript 手写 new.md">
                         
-                        <span class="card-title">JavaScript 手写 call 方法.md</span>
+                        <span class="card-title">JavaScript 手写 new.md</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            // ES5 实现
-Function.prototype.myCall = function (ctx) {
-  //   ctx = ctx || window;
-  ctx = ctx || globalThis; // node环境
-
+                            function myNew(fn, ...args) {
+  // 内存中创建一个对象
+  let obj = {};
+  // 这个新对象内部的[[prototype]]指针被赋值为构造函数的prototype属性
+  if (fn.p
                         
                     </div>
                     <div class="publish-info">
@@ -806,8 +806,8 @@ Function.prototype.myCall = function (ctx) {
                         <span class="chip bg-color">原生</span>
                     </a>
                     
-                    <a href="/tags/call/">
-                        <span class="chip bg-color">call</span>
+                    <a href="/tags/new/">
+                        <span class="chip bg-color">new</span>
                     </a>
                     
                 </div>
