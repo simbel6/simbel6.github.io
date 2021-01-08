@@ -756,23 +756,22 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/246c4cab/">
+                <a href="/posts/10b81f5c/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript 手写 new.md">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JavaScript 手写 apply 方法.md">
                         
-                        <span class="card-title">JavaScript 手写 new.md</span>
+                        <span class="card-title">JavaScript 手写 apply 方法.md</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            function myNew(fn, ...args) {
-  // 内存中创建一个对象
-  let obj = {};
-  // 这个新对象内部的[[prototype]]指针被赋值为构造函数的prototype属性
-  if (fn.p
+                            // ES5 实现
+Function.prototype.myApply1 = function (ctx, args) {
+  // 不指定this或者传入null或者undifined时，this指向window
+  ctx = ctx
                         
                     </div>
                     <div class="publish-info">
@@ -806,8 +805,8 @@
                         <span class="chip bg-color">原生</span>
                     </a>
                     
-                    <a href="/tags/new/">
-                        <span class="chip bg-color">new</span>
+                    <a href="/tags/apply/">
+                        <span class="chip bg-color">apply</span>
                     </a>
                     
                 </div>
